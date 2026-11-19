@@ -1,0 +1,25 @@
+# Power-on after a program was used: it starts by itself after 10 s.
+reboot
+expect menu
+countdown on
+expect-sel 2
+wait 3000
+shot countdown
+wait 7200
+expect done
+expect-launched apps/graphcalc.img
+
+# Any key stops the countdown.
+reboot
+countdown on
+wait 2000
+key left
+countdown off
+expect-sel 1
+wait 12000
+expect menu
+# Number keys start a program directly.
+key 1
+wait 100
+expect done
+expect-launched apps/typing.img

@@ -1,0 +1,12 @@
+# A program listed in apps.txt but missing from the card.
+write apps/apps.txt app=typing.img|Typing Adventure|keyboard\napp=chess.img|Chess|star\napp=writer.img|Story Writer|write\napp=graphcalc.img|Graphing Calculator|graph\n
+reboot
+countdown off
+key 2
+expect error
+shot missing
+key esc
+expect menu
+key 4
+wait 100
+expect done

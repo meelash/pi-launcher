@@ -1,0 +1,19 @@
+# First boot: nothing chosen before, so no countdown.
+expect menu
+countdown off
+expect-sel 1
+shot menu
+key right
+expect-sel 2
+key right
+expect-sel 1
+key left
+expect-sel 2
+shot menu-graph
+key enter
+expect starting
+shot starting
+wait 100
+expect done
+expect-launched apps/graphcalc.img
+expect-file apps/last.txt yes

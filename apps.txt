@@ -1,0 +1,12 @@
+# Programs in the boot menu. This file goes on the SD card as apps/apps.txt,
+# next to the program images (apps/<name>.img). Parents can edit it.
+#
+#   autostart=<seconds>   after power-on, start the program used last after
+#                         this many seconds unless a key is pressed (0 = never)
+#   app=<image>|<name shown on the card>|<icon: keyboard, graph, write, star>
+#
+# Up to 8 programs; the number keys 1-8 start them directly.
+
+autostart=10
+app=typing.img|Typing Adventure|keyboard
+app=graphcalc.img|Graphing Calculator|graph

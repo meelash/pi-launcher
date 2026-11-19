@@ -1,0 +1,12 @@
+# A program came back to the menu: no countdown, wait for a choice.
+write apps/show-menu 1
+reboot
+countdown off
+expect-file apps/show-menu no
+expect-sel 1
+wait 15000
+expect menu
+shot back-to-menu
+# The next power-on counts down again.
+reboot
+countdown on
